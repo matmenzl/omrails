@@ -9,8 +9,12 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem 'jquery-ui-rails', '~> 4.2.1'
 gem 'bootstrap', '~> 4.0.0.alpha5'
 gem 'devise'
+gem 'activeadmin', '~> 1.0.0.pre4'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
 
 
 
