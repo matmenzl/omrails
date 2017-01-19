@@ -1,5 +1,7 @@
 class TweetsController < ApplicationController
 
+  before_action :authenticate_user!, except: [:index, :show]
+
   # GET /tweets
   def index
     @tweets = Tweet.all
@@ -42,7 +44,7 @@ class TweetsController < ApplicationController
 
   # DELETE /tweets/1
   def destroy
-    @tweet = Tweet.find(params[:id])
+    @tweet = current_user.tweets.find(params[:id])
     @tweet.destroy
     redirect_to tweets_url, notice: 'Tweet was successfully destroyed.'
   end
